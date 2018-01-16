@@ -1,4 +1,4 @@
-# go_tensorflow_client
+# go-mnist-client
 
 An example of tensorflow_serving client in Go. 
 
@@ -10,15 +10,25 @@ TensorFlow documentation webpage.
 The main problem with tensorflow_serving is a lack of Go package ready to 
 import and run.
 
+This example is based on:
+[github.com/tobegit3hub/tensorflow_template_application](https://github.com/tobegit3hub/tensorflow_template_application)
+
 ## Setup fake workspace through a`$GOPATH` or copy files
 
 For a convenience, I provide the generated files under the `gopath` 
-subdirectory.
+subdirectory. You can copy files directly to your `$GOPATH`.
 
-## From sources
+```bash
+cp gopath/src $GOPATH
+```
+
+## Generating from sources
 
 For a purpose of generating proto we will use a `docker` container `grpc/go` with 
 `protoc`, `go` and [`gRPC`](https://grpc.io/) protoc extension installed.
+
+Remember that a version of TensorFlow Serving, TensorFlow C++ library and
+and Go TensorFlow library versions should match.
 
 ```
 go get -u golang.org/x/net/context
