@@ -24,7 +24,7 @@ It has these top-level messages:
 	FeatureList
 	FeatureLists
 */
-package tensorflow
+package example
 
 import proto "github.com/golang/protobuf/proto"
 import fmt "fmt"
@@ -86,7 +86,9 @@ func init() {
 	proto.RegisterType((*SequenceExample)(nil), "tensorflow.SequenceExample")
 }
 
-func init() { proto.RegisterFile("github.com/tensorflow/tensorflow/tensorflow/go/core/example/example.proto", fileDescriptor0) }
+func init() {
+	proto.RegisterFile("github.com/tensorflow/tensorflow/tensorflow/go/core/example/example.proto", fileDescriptor0)
+}
 
 var fileDescriptor0 = []byte{
 	// 190 bytes of a gzipped FileDescriptorProto
